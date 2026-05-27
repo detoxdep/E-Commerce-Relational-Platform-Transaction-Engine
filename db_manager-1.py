@@ -1,13 +1,14 @@
+import os
 import psycopg2
 from psycopg2 import sql 
 
 class DBManager:
     def __init__(self):
-        self.DB_HOST = "localhost"
-        self.DB_NAME = "Assignment2"
-        self.DB_USER = "postgres"
-        self.DB_PASS = 
-        self.DB_PORT = "5432"
+        self.DB_HOST = os.getenv("DB_HOST","localhost")
+        self.DB_NAME = os.getenv("DB_NAME","Assignment2")
+        self.DB_USER = os.getenv("DB_USER","postgres")
+        self.DB_PASS = os.getenv("DB_PASS")
+        self.DB_PORT = os.getev("DB_PORT","5432")
 
         self.conn = None
         self.cursor = None
