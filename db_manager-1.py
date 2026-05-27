@@ -6,7 +6,7 @@ class DBManager:
         self.DB_HOST = "localhost"
         self.DB_NAME = "Assignment2"
         self.DB_USER = "postgres"
-        self.DB_PASS = "medrano12"
+        self.DB_PASS = 
         self.DB_PORT = "5432"
 
         self.conn = None
